@@ -1,0 +1,10 @@
+CREATE DATABASE Burgers_db;
+
+USE Burgers_db;
+
+CREATE TABLE BURGERS(
+id INT AUTO_INCREMENT,
+Burger_Name VARCHAR(45),
+Devoured BOOLEAN DEFAULT false,
+PRIMARY KEY (id)
+)
