@@ -3,9 +3,9 @@
 <h2>Lets make some good Burgers</h2>
 
 <ul>
-  {{#each Burger_Name}}
-    {{#unless Devoured}}
-      {{> Burger_Name/cat-block sleep=true}}
+  {{#each BURGERS}}
+    {{#unless this.Devoured}}
+      <h5>{{this.id}}.{{this.Burger_Name}}</h5>
     {{/unless}}
   {{/each}}
 </ul>
@@ -13,9 +13,9 @@
 <h2>Those were good burgers</h2>
 
 <ul>
-  {{#each Burger_Name}}
-    {{#if Devoured}}
-      {{> Burger_Name/cat-block sleep=false}}
+  {{#each BURGERS}}
+    {{#if this.Devoured}}
+        <h5>{{this.id}}.{{this.Burger_Name}}</h5>
     {{/if}}
   {{/each}}
 </ul>
